@@ -1,0 +1,10 @@
+server:
+  port: 9000
+
+#默认情况下，spring boot从控制台打印出来的日志级别只有ERROR,WARN,INFO，如果你想要打印debug级别
+debug: true
+logging:
+  file: F:\\log\\api.log
+
+api:
+  no: ${api:no}
