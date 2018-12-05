@@ -47,6 +47,21 @@
         </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>Public Repositories</name>
+            <url>http://106.14.221.102:8081/nexus/content/repositories/thirdparty/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <!--JDK版本 -->
@@ -58,6 +73,7 @@
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
                     <showWarnings>true</showWarnings>
+
                 </configuration>
             </plugin>
         </plugins>
