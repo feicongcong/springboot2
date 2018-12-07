@@ -26,6 +26,10 @@ public class RestHelloController {
     @Qualifier("currentEnvironment")
     private String env;
 
+    @Autowired
+    @Qualifier("getBase")
+    private BaseOutDto bb;
+
     @RequestMapping(value = "hello",
             method = RequestMethod.GET
             )

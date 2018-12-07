@@ -5,10 +5,13 @@ import com.fasterxml.jackson.databind.AnnotationIntrospector;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
+import com.fcc.springboot2.api.pojo.dto.out.BaseOutDto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.prefs.BackingStoreException;
 
 /**
  * @Description:
@@ -28,5 +31,12 @@ public class JsonConfig {
         AnnotationIntrospector intr = new JacksonAnnotationIntrospector();
         mapper.setAnnotationIntrospector(intr);
         return mapper;
+    }
+
+    @Bean
+    public BaseOutDto  getBase(){
+        BaseOutDto out=new BaseOutDto();
+        out.setCreateAt(new Date());
+        return out;
     }
 }

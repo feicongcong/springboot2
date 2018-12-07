@@ -22,7 +22,7 @@ import org.springframework.context.annotation.Import;
 //        Swagger2Config.class,
 })
 @ComponentScan(basePackages = {
-        "com.fcc.api"
+        "com.fcc.springboot2.api"
 })
 //使其成为一个spring boot应用
 @SpringBootApplication
